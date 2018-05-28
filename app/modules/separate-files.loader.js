@@ -7,7 +7,7 @@ module.exports = function (content, map) {
     const fileName = fileNameAndExtension.replace('.html.vue', '');
 
     // If the file is not from our project
-    if (filePath.includes('nuxt') || filePath.includes('node_modules')) {
+    if (filePath.includes('.temp') || filePath.includes('node_modules')) {
         return content;
     }
 
