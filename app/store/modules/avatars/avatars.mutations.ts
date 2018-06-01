@@ -1,9 +1,12 @@
 import { MutationTree } from 'vuex';
-import { types } from './avatars.types';
 import { State, AvatarsFace } from './avatars.models';
 
+export const enum AvatarsMutation {
+    SET_FACE = 'SET_FACE'
+}
+
 export const mutations: MutationTree<State> = {
-    [types.SET_FACE](state: State, face: AvatarsFace) {
+    [AvatarsMutation.SET_FACE]: (state: State, face: AvatarsFace) => {
         state.faceParts = face;
     }
 };
